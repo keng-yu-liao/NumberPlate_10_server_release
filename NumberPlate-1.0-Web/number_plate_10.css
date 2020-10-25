@@ -1,0 +1,90 @@
+
+
+/* Layout for mobile */
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    html{
+        background-color: #FFCC22;
+    }
+
+    #body{
+        overflow: hidden;
+        display: flex;
+    }	
+
+    #main-header{
+        display: block;
+        text-align: center;
+	    line-height: 60px;
+	    font-weight: bold;
+        font-size: 18pt;
+        font-family: Microsoft JhengHei;
+    }
+
+    .numberfield{
+        background: #FFCC22;
+        font-family: Microsoft JhengHei;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #currentnum-bg{
+        display: block;
+        border-radius: 25px;
+        background: #000000; 
+        width: 80%;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #currentnum-title{
+        display: inline-block;
+        margin-top: 20px; 
+        font-size: 22pt;
+        background-color: transparent; 
+        color: #ffffff;   
+    }
+
+    #currentnum-num{
+        display: block;
+        margin-top: 15px; 
+        font-size: 35pt;
+        background-color: transparent; 
+        color: #ffffff;   
+    }
+
+    #yournum-bg{
+        display: block;
+        border-radius: 25px;
+        background: #dddddd; 
+        width: 80%;
+        height: 150px;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #yournum-title{
+        display: inline-block;
+        margin-top: 20px; 
+        font-size: 22pt;
+        background-color: transparent; 
+        color: #0066ff;     
+    }
+
+    #yournum-num{
+        display: block;
+        margin-top: 15px; 
+        font-size: 35pt;
+        background-color: transparent;
+        color: #0066ff;     
+    }
+
+    #takemeal-tv{
+	display: inline-block;
+	margin-top: 40px;
+	font-size: 22pt;
+    color: #ff2d2d;
+    visibility: hidden;     
+    }
+}
