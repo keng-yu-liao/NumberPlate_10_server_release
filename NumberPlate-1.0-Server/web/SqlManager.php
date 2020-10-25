@@ -84,7 +84,7 @@ class SqlManager {
     public static function getLastDoneNum($storeTableName) {
         global $statusSuccess, $statusFail;
 
-        $sqlRequest = "select done_num from store_test_num_status where (num_index >= (select max(num_index) from store_test_num_status));";
+        $sqlRequest = "select done_num from $storeTableName where (num_index >= (select max(num_index) from $storeTableName));";
         $sqlResult = mysqli_query(self::$_connection, $sqlRequest);
         $sqlResultRow = mysqli_fetch_assoc($sqlResult);
 	    $sqlResultRowSplit = explode("*", $sqlResultRow["done_num"]);
@@ -112,7 +112,7 @@ class SqlManager {
     public static function compareDoneNum($storeTableName, $yourNum, $numIndex) {
         global $statusSuccess, $statusFail;
 
-        $sqlRequest = "select done_num from store_test_num_status where num_index = $numIndex;";
+        $sqlRequest = "select done_num from $storeTableName where num_index = $numIndex;";
         $sqlResult = mysqli_query(self::$_connection, $sqlRequest);
         $sqlResultRow = mysqli_fetch_assoc($sqlResult);
 
